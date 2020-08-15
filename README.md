@@ -1,4 +1,4 @@
-# DeepRec-with-pytorch
+# Algo-with-pytorch
 ## 简介
 
  这个项目使用pytorch实现了一些使用深度推荐算法，这个项目首先是为了方便自己不用重复撸代码，其次便是为大家提供算法在代码层面上
