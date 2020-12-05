@@ -1,24 +1,26 @@
 # Algo-with-pytorch
-## 简介
+实现一些常见的推荐算法模型，避免做重复性的工作
 
-这个项目使用pytorch实现了一些深度学习算法，内容主要涉及如下2类:
-- 深度学习推荐算法
-- 文本分类算法
+## 数据集
+- movielens 1m
 
-## 需要的环境
-
-- python3.7+
-- numpy
-- pytorch
-- pandas
-- ...
-
-## 已实现的算法
-
-- ...
-
-## 待实现的算法
+## 模型
 ...
 
-## 其他
-你的star就是对我的认可~
+## todo list
+...
+
+
+## 评价指标
+...
+
+## 项目结构
+
+- layers
+- models
+- utils
+    - dataset
+        - movielens.py
+    - evaluate
+        - regression_metrics.py
+        - class_metrics.py
