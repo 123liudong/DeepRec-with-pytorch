@@ -7,6 +7,7 @@ from models.FM import FM
 from models.LR import LR
 from models.NCF import NCF
 from models.NFM import NFM
+from models.WideAndDeep import WideAndDeep
 from utils.dataset.movielens import ML1m, ML20m
 
 
@@ -70,6 +71,11 @@ def choose_model(model_name, dataset, **kwargs):
                     embed_size=kwargs['embed_size'],
                     hidden_nbs=kwargs['hidden_nbs'],
                     dropout=kwargs['dropout'])
+    elif model_name == 'w&d':
+        model = WideAndDeep(feature_dims=dataset.feature_dims,
+                            embed_size=kwargs['embed_size'],
+                            hidden_nbs=kwargs['hidden_nbs'],
+                            dropout=kwargs['dropout'])
     return model
 
 
