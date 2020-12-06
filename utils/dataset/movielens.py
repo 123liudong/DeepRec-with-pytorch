@@ -17,7 +17,8 @@ class ML1m(Dataset):
         data = pd.read_csv(data_path, sep=sep, header=header).to_numpy()[:, :3]
         # 对用户和项目的Id进行处理，因为所有的id都是从1开始，所有这里减去
         self.features = data[:, :2].astype(np.long)-1
-        self.targets = self.__process_score(data[:, -1]).astype(np.float)
+        self.targets = self.__process_score(data[:, -1]).astype(np.float32)
+        self.feature_dims = np.max(self.features, axis=0)+1
 
     def __getitem__(self, idx):
         return self.features[idx], self.targets[idx]

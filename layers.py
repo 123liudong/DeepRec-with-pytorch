@@ -53,7 +53,6 @@ class Feature_Embedding_Sum(nn.Module):
         '''
         # unsqueeze主要是考虑到batch的存在
         data = data + torch.tensor(self.offset, dtype=torch.long).unsqueeze(0)
-        print(self.embedding(data).size())
         # 把所有embedding之后的值向量叠加起来，得到一个向量
         data = torch.sum(self.embedding(data), dim=1) + self.bias
         return data
@@ -95,6 +94,6 @@ class MLP(nn.Module):
         return self.mlp(data)
 
 
-model = MLP(3, [3,4,5], 1, last_act='sigmoid')
-data = torch.randn((1024, 3))
-print(model(data)[:10])
+# model = MLP(3, [3,4,5], 1, last_act='sigmoid')
+# data = torch.randn((1024, 3))
+# print(model(data)[:10])
