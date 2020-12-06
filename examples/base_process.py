@@ -9,6 +9,7 @@ from models.NCF import NCF
 from models.NFM import NFM
 from models.WideAndDeep import WideAndDeep
 from utils.dataset.movielens import ML1m, ML20m
+from utils.evaluate import regression_metrics
 
 
 def train(model, dataloader, opt, criterion, device, log_interval=100):
@@ -46,7 +47,16 @@ def test(model, dataloader, device):
     :param device:
     :return:
     '''
-    pass
+    model.eval()
+    target_vec, predict_vec = [], []
+    with torch.no_grad():
+        for feature, target in tqdm(dataloader):
+            feature, target = feature.to(device), target.to(device)
+            predict = model(feature)
+            predict_vec.extend(predict.tolist())
+            target_vec.extend(target.tolist())
+    return regression_metrics.get_metrics(predict_vec, target_vec)
+
 
 
 def choose_model(model_name, dataset, **kwargs):
@@ -123,3 +133,5 @@ def main(model_name, dataset_name, dataset_path, epoches, batch_size,
     loss_f = torch.nn.BCELoss()
     for e in range(epoches):
         train(model, dataloader_train, opt, criterion=loss_f, device=device, log_interval=100)
+        value_rmse, value_mae, value_auc = test(model, dataloader_valid, device)
+        print('value_rmse: {0}, value_mae: {1}, value_auc: {2}'.format(str(value_rmse), str(value_mae), str(value_auc)))
