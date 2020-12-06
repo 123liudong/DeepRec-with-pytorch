@@ -4,6 +4,7 @@ import numpy as np
 import torch
 
 from models.LR import LR
+from models.NCF import NCF
 from utils.dataset.movielens import ML1m, ML20m
 
 
@@ -45,7 +46,7 @@ def test(model, dataloader, device):
     pass
 
 
-def choose_model(model_name, dataset):
+def choose_model(model_name, dataset, **kwargs):
     '''
     根据模型名称制造模型
     :param model_name: 模型名称简写
@@ -53,6 +54,13 @@ def choose_model(model_name, dataset):
     '''
     if model_name == 'lr':
         model = LR(feature_dims=dataset.feature_dims)
+    elif model_name == 'ncf':
+        model = NCF(feature_dims=dataset.feature_dims,
+                    embed_size=kwargs['embed_size'],
+                    hidden_nbs=kwargs['hidden_nbs'],
+                    user_field_idx=dataset.user_field_idx,
+                    item_field_idx=dataset.item_field_idx,
+                    dropout=kwargs['item_field_idx'])
     return model
 
 
@@ -65,7 +73,7 @@ def choose_dataset(dataset_name, dataset_path):
 
 
 def main(model_name, dataset_name, dataset_path, epoches, batch_size,
-         lr, device, save_path):
+         lr, device, save_path, model_params={}):
     '''
     :param model_name:
     :param dataset_name: 数据集的名称
@@ -89,7 +97,7 @@ def main(model_name, dataset_name, dataset_path, epoches, batch_size,
     dataloader_valid = DataLoader(dataset=valid_dataset, shuffle=True, batch_size=batch_size)
     dataloader_test = DataLoader(dataset=test_dataset, shuffle=True, batch_size=batch_size)
     # 定义模型相关内容
-    model = choose_model(model_name=model_name, dataset=dataset).to(device)
+    model = choose_model(model_name=model_name, dataset=dataset, **model_params).to(device)
     opt = torch.optim.Adam(model.parameters(), lr=lr)
     loss_f = torch.nn.BCELoss()
     for e in range(epoches):

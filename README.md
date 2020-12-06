@@ -5,7 +5,7 @@
 - movielens 1m
 
 ## 模型
-...
+- LR
 
 ## todo list
 ...

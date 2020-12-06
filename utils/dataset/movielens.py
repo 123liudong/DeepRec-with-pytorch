@@ -19,6 +19,9 @@ class ML1m(Dataset):
         self.features = data[:, :2].astype(np.long)-1
         self.targets = self.__process_score(data[:, -1]).astype(np.float32)
         self.feature_dims = np.max(self.features, axis=0)+1
+        # 指定用户和项目的下标
+        self.user_field_idx = np.array((0,), dtype=np.long)
+        self.item_field_idx = np.array((1,), dtype=np.long)
 
     def __getitem__(self, idx):
         return self.features[idx], self.targets[idx]
