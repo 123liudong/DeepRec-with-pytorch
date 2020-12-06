@@ -1,4 +1,4 @@
-# Algo-with-pytorch
+# rs-with-pytorch
 实现一些常见的推荐算法模型，避免做重复性的工作
 
 ## 数据集

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="455d5f91-742b-4969-9a6e-a5f4bd8be520" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/examples/Train_FM.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Train_FM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/Train_LR.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Train_LR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/base_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/base_process.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/evaluate/regression_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/evaluate/regression_metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/Train_Wide&amp;Deep.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="24">
@@ -75,11 +72,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/base_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="137" selection-start-line="137" selection-end-line="137" />
+            <state relative-caret-position="696">
+              <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#388#1080#0" />
+                <element signature="e#1170#1632#0" />
+                <element signature="e#1282#2762#0" />
+                <element signature="e#2817#2971#0" />
+                <element signature="e#3533#4948#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="576">
+                <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -130,12 +144,12 @@
         <option value="$PROJECT_DIR$/layers.py" />
         <option value="$PROJECT_DIR$/models/DeepCross.py" />
         <option value="$PROJECT_DIR$/examples/Train_DeepCross.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/examples/Train_LR.py" />
         <option value="$PROJECT_DIR$/utils/evaluate/regression_metrics.py" />
         <option value="$PROJECT_DIR$/examples/base_process.py" />
         <option value="$PROJECT_DIR$/examples/Train_FM.py" />
         <option value="$PROJECT_DIR$/examples/Train_NFM.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -332,22 +346,22 @@
       <workItem from="1607175337715" duration="5039000" />
       <workItem from="1607180395545" duration="772000" />
       <workItem from="1607226945574" duration="122000" />
-      <workItem from="1607227083627" duration="23360000" />
+      <workItem from="1607227083627" duration="23554000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29293000" />
+    <option name="totallyTimeSpent" value="29487000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1066" height="1656" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22289157" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12248996" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6655563" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.47435042" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -356,7 +370,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32978016" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.43171218" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.43171218" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -534,30 +548,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="133">
-            <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/LR.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/base_process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -610,6 +604,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/base_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#388#1080#0" />
+            <element signature="e#1170#1632#0" />
+            <element signature="e#1282#2762#0" />
+            <element signature="e#2817#2971#0" />
+            <element signature="e#3533#4948#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="576">
+            <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
