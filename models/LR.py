@@ -1,5 +1,3 @@
-import torch
-import numpy as np
 import torch.nn as nn
 from layers import Feature_Embedding_Sum
 

@@ -3,6 +3,7 @@ from tqdm import tqdm
 import numpy as np
 import torch
 
+from models.FM import FM
 from models.LR import LR
 from models.NCF import NCF
 from utils.dataset.movielens import ML1m, ML20m
@@ -54,6 +55,8 @@ def choose_model(model_name, dataset, **kwargs):
     '''
     if model_name == 'lr':
         model = LR(feature_dims=dataset.feature_dims)
+    elif model_name == 'fm':
+        model = FM(feature_dims=dataset.feature_dims, embed_size=kwargs['embed_size'])
     elif model_name == 'ncf':
         model = NCF(feature_dims=dataset.feature_dims,
                     embed_size=kwargs['embed_size'],
