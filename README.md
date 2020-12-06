@@ -6,6 +6,7 @@
 
 ## 模型
 - LR
+- NCF
 
 ## todo list
 ...

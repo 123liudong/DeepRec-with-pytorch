@@ -25,15 +25,6 @@ class Feature_Embedding(nn.Module):
         # unsqueeze主要是考虑到batch的存在
         data = data + torch.tensor(self.offset, dtype=torch.long).unsqueeze(0)
         return self.embedding(data)
-# model = Feature_Embedding([3, 5], 16)
-#
-# data = torch.tensor([
-#     [1, 2],
-#     [0, 1],
-#     [1, 1],
-#     [0, 3]
-# ], dtype=torch.long)
-# out = model(data)
 
 
 class Feature_Embedding_Sum(nn.Module):
@@ -56,15 +47,7 @@ class Feature_Embedding_Sum(nn.Module):
         # 把所有embedding之后的值向量叠加起来，得到一个向量
         data = torch.sum(self.embedding(data), dim=1) + self.bias
         return data
-# model = Feature_Embedding_Sum([3, 5], 3)
-# data = torch.tensor([
-#     [1, 2],
-#     [0, 1],
-#     [1, 1],
-#     [0, 3]
-# ], dtype=torch.long)
-# out = model(data)
-# print(out.size())
+
 
 class MLP(nn.Module):
     def __init__(self, input_dim, hidden_nbs, out_dim, last_act='sigmoid', drop_rate=0.2):
@@ -94,6 +77,6 @@ class MLP(nn.Module):
         return self.mlp(data)
 
 
-# model = MLP(3, [3,4,5], 1, last_act='sigmoid')
-# data = torch.randn((1024, 3))
-# print(model(data)[:10])
+class FactorizationMachine(nn.Module):
+    def __init__(self, reduce_sum=True):
+        super(FactorizationMachine, self).__init__()
