@@ -7,6 +7,10 @@
 ## 模型
 - LR
 - NCF
+- FM
+- NFM
+- Wide&Deep
+- DeepCross
 
 ## todo list
 ...
@@ -17,8 +21,15 @@
 
 ## 项目结构
 
-- layers
+- layers.py
+- examples
 - models
+    - LR
+    - NCF
+    - FM
+    - NFM
+    - Wide&Deep
+    - DeepCross
 - utils
     - dataset
         - movielens.py
