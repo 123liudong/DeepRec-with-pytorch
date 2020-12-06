@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="455d5f91-742b-4969-9a6e-a5f4bd8be520" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/examples/Train_Wide&amp;Deep.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/WideAndDeep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/Train_DeepCross.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepCross.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/Train_FM.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Train_FM.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/base_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/base_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/layers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/WideAndDeep.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/WideAndDeep.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,54 +19,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/WideAndDeep.py">
+        <entry file="file://$PROJECT_DIR$/models/DeepCross.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="70" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="70" />
+            <state relative-caret-position="528">
+              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/Train_DeepCross.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/examples/Train_Wide&amp;Deep.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/base_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="77" column="54" lean-forward="true" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
+            <state relative-caret-position="547">
+              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/Train_NFM.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="11" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/layers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,6 +59,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>print</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -95,16 +82,18 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/models/LR.py" />
-        <option value="$PROJECT_DIR$/models/NCF.py" />
-        <option value="$PROJECT_DIR$/examples/Train_FM.py" />
-        <option value="$PROJECT_DIR$/layers.py" />
         <option value="$PROJECT_DIR$/models/FM.py" />
         <option value="$PROJECT_DIR$/examples/Train_NFM.py" />
         <option value="$PROJECT_DIR$/examples/Train_NCF.py" />
         <option value="$PROJECT_DIR$/models/NFM.py" />
-        <option value="$PROJECT_DIR$/models/WideAndDeep.py" />
-        <option value="$PROJECT_DIR$/examples/base_process.py" />
         <option value="$PROJECT_DIR$/examples/Train_Wide&amp;Deep.py" />
+        <option value="$PROJECT_DIR$/examples/Train_FM.py" />
+        <option value="$PROJECT_DIR$/models/NCF.py" />
+        <option value="$PROJECT_DIR$/models/WideAndDeep.py" />
+        <option value="$PROJECT_DIR$/layers.py" />
+        <option value="$PROJECT_DIR$/models/DeepCross.py" />
+        <option value="$PROJECT_DIR$/examples/Train_DeepCross.py" />
+        <option value="$PROJECT_DIR$/examples/base_process.py" />
       </list>
     </option>
   </component>
@@ -183,7 +172,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Train_Wide&amp;Deep">
+  <component name="RunManager" selected="Python.Train_DeepCross">
+    <configuration name="DeepCross" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="rs-with-pytorch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/DeepCross.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="FM" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="rs-with-pytorch" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -206,7 +217,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Train_NCF" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Train_DeepCross" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="rs-with-pytorch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -219,7 +230,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/Train_NCF.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/Train_DeepCross.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -228,7 +239,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Train_NFM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Train_FM" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="rs-with-pytorch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -241,7 +252,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/Train_NFM.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/Train_FM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -272,35 +283,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="WideAndDeep" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="rs-with-pytorch" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/WideAndDeep.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Train_Wide&amp;Deep" />
-        <item itemvalue="Python.WideAndDeep" />
-        <item itemvalue="Python.Train_NFM" />
-        <item itemvalue="Python.Train_NCF" />
+        <item itemvalue="Python.Train_DeepCross" />
+        <item itemvalue="Python.DeepCross" />
+        <item itemvalue="Python.Train_FM" />
         <item itemvalue="Python.FM" />
+        <item itemvalue="Python.Train_Wide&amp;Deep" />
       </list>
     </recent_temporary>
   </component>
@@ -317,22 +306,23 @@
       <workItem from="1607175337715" duration="5039000" />
       <workItem from="1607180395545" duration="772000" />
       <workItem from="1607226945574" duration="122000" />
-      <workItem from="1607227083627" duration="14281000" />
+      <workItem from="1607227083627" duration="17347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20214000" />
+    <option name="totallyTimeSpent" value="23280000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1066" height="1656" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1937751" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20180723" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47235176" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43970686" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -341,7 +331,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32978016" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.19986676" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.35376415" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -378,16 +368,18 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rs_with_pytorch$Train_NCF.coverage" NAME="Train_NCF Coverage Results" MODIFIED="1607238931709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
-    <SUITE FILE_PATH="coverage/rs_with_pytorch$Train_Wide_Deep.coverage" NAME="Train_Wide&amp;Deep Coverage Results" MODIFIED="1607241175604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/rs_with_pytorch$NCF.coverage" NAME="NCF Coverage Results" MODIFIED="1607234771170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
-    <SUITE FILE_PATH="coverage/rs_with_pytorch$LR.coverage" NAME="LR Coverage Results" MODIFIED="1607179517032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/models" />
     <SUITE FILE_PATH="coverage/rs_with_pytorch$layers.coverage" NAME="layers Coverage Results" MODIFIED="1607226840956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/rs_with_pytorch$movielens.coverage" NAME="movielens Coverage Results" MODIFIED="1607177291440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/dataset" />
-    <SUITE FILE_PATH="coverage/rs_with_pytorch$Train_FM.coverage" NAME="Train_FM Coverage Results" MODIFIED="1607237239193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
-    <SUITE FILE_PATH="coverage/rs_with_pytorch$FM.coverage" NAME="FM Coverage Results" MODIFIED="1607238507907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
-    <SUITE FILE_PATH="coverage/rs_with_pytorch$Train_LR.coverage" NAME="Train_LR Coverage Results" MODIFIED="1607237853656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/rs_with_pytorch$FM.coverage" NAME="FM Coverage Results" MODIFIED="1607243144464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
+    <SUITE FILE_PATH="coverage/rs_with_pytorch$Train_FM.coverage" NAME="Train_FM Coverage Results" MODIFIED="1607243298253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/rs_with_pytorch$Train_NFM.coverage" NAME="Train_NFM Coverage Results" MODIFIED="1607239076502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/rs_with_pytorch$WideAndDeep.coverage" NAME="WideAndDeep Coverage Results" MODIFIED="1607240794500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
+    <SUITE FILE_PATH="coverage/rs_with_pytorch$Train_Wide_Deep.coverage" NAME="Train_Wide&amp;Deep Coverage Results" MODIFIED="1607241175604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/rs_with_pytorch$DeepCross.coverage" NAME="DeepCross Coverage Results" MODIFIED="1607244377070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
+    <SUITE FILE_PATH="coverage/rs_with_pytorch$LR.coverage" NAME="LR Coverage Results" MODIFIED="1607179517032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils/models" />
+    <SUITE FILE_PATH="coverage/rs_with_pytorch$Train_DeepCross.coverage" NAME="Train_DeepCross Coverage Results" MODIFIED="1607244546289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/rs_with_pytorch$Train_LR.coverage" NAME="Train_LR Coverage Results" MODIFIED="1607237853656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/rs_with_pytorch$test.coverage" NAME="test Coverage Results" MODIFIED="1607229976838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
@@ -451,48 +443,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/dataset/movielens.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#1326#1417#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/site-packages/torch/utils/data/dataset.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="262" column="4" selection-start-line="262" selection-start-column="4" selection-end-line="262" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/LR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="e#1#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/FM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/Train_FM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -510,6 +464,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/Train_NFM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/dataset/movielens.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#1326#1417#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/Train_FM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/WideAndDeep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/NFM.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -520,49 +509,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/NCF.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="44" lean-forward="true" selection-end-line="41" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/layers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="617">
+          <caret line="112" column="16" lean-forward="true" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#96#848#0" />
+            <element signature="e#1624#2566#0" />
+            <element signature="e#2612#3055#0" />
+            <element signature="e#3089#3619#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/FM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/Train_NFM.py">
+    <entry file="file://$PROJECT_DIR$/models/LR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="192">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/WideAndDeep.py">
+    <entry file="file://$PROJECT_DIR$/models/NCF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="70" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="70" />
+        <state relative-caret-position="403">
+          <caret line="31" lean-forward="true" selection-end-line="41" selection-end-column="12" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/base_process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="77" column="54" lean-forward="true" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -570,7 +553,34 @@
     <entry file="file://$PROJECT_DIR$/examples/Train_Wide&amp;Deep.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/DeepCross.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/Train_DeepCross.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/base_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

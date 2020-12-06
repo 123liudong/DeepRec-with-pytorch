@@ -92,3 +92,22 @@ class FactorizationMachine(nn.Module):
         if self.reduce_sum:
             data = torch.sum(data, dim=1, keepdim=True)
         return 0.5 * data
+
+
+class CrossNet(nn.Module):
+    def __init__(self, input_dim, num_layers):
+        super(CrossNet, self).__init__()
+        self.num_layer = num_layers
+        self.w = nn.ModuleList([
+            nn.Linear(input_dim, 1, bias=False) for _ in range(num_layers)
+        ])
+        self.b = nn.ParameterList(
+            nn.Parameter(torch.zeros((input_dim, ))) for _ in range(num_layers)
+        )
+
+    def forward(self, x):
+        x0 = x
+        for i in range(self.num_layer):
+            xw = self.w[i](x)
+            x = x0*xw + self.b[i] + x
+        return x

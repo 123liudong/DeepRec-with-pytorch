@@ -1,8 +1,8 @@
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-import numpy as np
 import torch
 
+from models.DeepCross import DeepCross
 from models.FM import FM
 from models.LR import LR
 from models.NCF import NCF
@@ -75,6 +75,12 @@ def choose_model(model_name, dataset, **kwargs):
         model = WideAndDeep(feature_dims=dataset.feature_dims,
                             embed_size=kwargs['embed_size'],
                             hidden_nbs=kwargs['hidden_nbs'],
+                            dropout=kwargs['dropout'])
+    elif model_name == 'deepCross':
+        model = DeepCross(feature_dims=dataset.feature_dims,
+                            embed_size=kwargs['embed_size'],
+                            hidden_nbs=kwargs['hidden_nbs'],
+                            num_layer=kwargs['num_layer'],
                             dropout=kwargs['dropout'])
     return model
 
