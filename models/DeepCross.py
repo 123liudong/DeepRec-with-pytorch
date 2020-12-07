@@ -4,9 +4,9 @@ from layers import Feature_Embedding, MLP, CrossNet
 
 
 class DeepCross(nn.Module):
-    def __init__(self, feature_dims, embed_size, hidden_nbs, num_layer=5, dropout=0):
+    def __init__(self, device, feature_dims, embed_size, hidden_nbs, num_layer=5, dropout=0):
         super(DeepCross, self).__init__()
-        self.embedding = Feature_Embedding(feature_dims=feature_dims, embed_size=embed_size)
+        self.embedding = Feature_Embedding(feature_dims=feature_dims, embed_size=embed_size, device=device)
         self.embed_out_dim = len(feature_dims) * embed_size
         self.cross = CrossNet(input_dim=self.embed_out_dim, num_layers=num_layer)
         self.mlp = MLP(input_dim=self.embed_out_dim,

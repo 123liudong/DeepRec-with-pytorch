@@ -7,12 +7,13 @@ class Feature_Embedding(nn.Module):
     '''
     实现特征的嵌入
     '''
-    def __init__(self, feature_dims, embed_size):
+    def __init__(self, feature_dims, embed_size, device):
         '''
         :param feature_dims: 各个特征的数量，如[3, 32, 343]表示特征1有3个取值范围，特征2有32个取值范围
         :param embed_size: 嵌入向量的维度，这里嵌入到同一个维度
         '''
         super(Feature_Embedding, self).__init__()
+        self.device = device
         self.embedding = nn.Embedding(sum(feature_dims), embedding_dim=embed_size)
         self.offset = np.array([0, *np.cumsum(feature_dims)[:-1]], dtype=np.long)
         torch.nn.init.xavier_uniform_(self.embedding.weight.data)
@@ -23,7 +24,7 @@ class Feature_Embedding(nn.Module):
         :return:
         '''
         # unsqueeze主要是考虑到batch的存在
-        data = data + torch.tensor(self.offset, dtype=torch.long).unsqueeze(0)
+        data = data + torch.tensor(self.offset, dtype=torch.long).unsqueeze(0).to(self.device)
         return self.embedding(data)
 
 
@@ -31,8 +32,9 @@ class Feature_Embedding_Sum(nn.Module):
     '''
     对特征向量化后，然后对所有向量求和，得到一个包含了所有信息的向量
     '''
-    def __init__(self, feature_dims, out_dim=1):
+    def __init__(self, feature_dims, device, out_dim=1):
         super(Feature_Embedding_Sum, self).__init__()
+        self.device = device
         self.embedding = nn.Embedding(sum(feature_dims), out_dim)
         self.bias = nn.Parameter(torch.zeros((out_dim,)))
         self.offset = np.array([0, *np.cumsum(feature_dims)[:-1]], dtype=np.long)
@@ -43,7 +45,7 @@ class Feature_Embedding_Sum(nn.Module):
         :return:
         '''
         # unsqueeze主要是考虑到batch的存在
-        data = data + torch.tensor(self.offset, dtype=torch.long).unsqueeze(0)
+        data = data + torch.tensor(self.offset, dtype=torch.long).unsqueeze(0).to(self.device)
         # 把所有embedding之后的值向量叠加起来，得到一个向量
         data = torch.sum(self.embedding(data), dim=1) + self.bias
         return data

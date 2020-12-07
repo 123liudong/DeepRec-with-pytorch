@@ -1,7 +1,6 @@
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 import torch
-
 from models.DeepCross import DeepCross
 from models.FM import FM
 from models.LR import LR
@@ -10,6 +9,7 @@ from models.NFM import NFM
 from models.WideAndDeep import WideAndDeep
 from utils.dataset.movielens import ML1m, ML20m
 from utils.evaluate import regression_metrics
+from matplotlib import pyplot
 
 
 def train(model, dataloader, opt, criterion, device, log_interval=100):
@@ -59,35 +59,35 @@ def test(model, dataloader, device):
 
 
 
-def choose_model(model_name, dataset, **kwargs):
+def choose_model(model_name, dataset, device, **kwargs):
     '''
     根据模型名称制造模型
     :param model_name: 模型名称简写
     :return:
     '''
     if model_name == 'lr':
-        model = LR(feature_dims=dataset.feature_dims)
+        model = LR(device=device, feature_dims=dataset.feature_dims)
     elif model_name == 'fm':
-        model = FM(feature_dims=dataset.feature_dims, embed_size=kwargs['embed_size'])
+        model = FM(device=device, feature_dims=dataset.feature_dims, embed_size=kwargs['embed_size'])
     elif model_name == 'ncf':
-        model = NCF(feature_dims=dataset.feature_dims,
+        model = NCF(device=device, feature_dims=dataset.feature_dims,
                     embed_size=kwargs['embed_size'],
                     hidden_nbs=kwargs['hidden_nbs'],
                     user_field_idx=dataset.user_field_idx,
                     item_field_idx=dataset.item_field_idx,
                     dropout=kwargs['dropout'])
     elif model_name == 'nfm':
-        model = NFM(feature_dims=dataset.feature_dims,
+        model = NFM(device=device, feature_dims=dataset.feature_dims,
                     embed_size=kwargs['embed_size'],
                     hidden_nbs=kwargs['hidden_nbs'],
                     dropout=kwargs['dropout'])
     elif model_name == 'w&d':
-        model = WideAndDeep(feature_dims=dataset.feature_dims,
+        model = WideAndDeep(device=device, feature_dims=dataset.feature_dims,
                             embed_size=kwargs['embed_size'],
                             hidden_nbs=kwargs['hidden_nbs'],
                             dropout=kwargs['dropout'])
     elif model_name == 'deepCross':
-        model = DeepCross(feature_dims=dataset.feature_dims,
+        model = DeepCross(device=device, feature_dims=dataset.feature_dims,
                             embed_size=kwargs['embed_size'],
                             hidden_nbs=kwargs['hidden_nbs'],
                             num_layer=kwargs['num_layer'],
@@ -128,10 +128,15 @@ def main(model_name, dataset_name, dataset_path, epoches, batch_size,
     dataloader_valid = DataLoader(dataset=valid_dataset, shuffle=True, batch_size=batch_size)
     dataloader_test = DataLoader(dataset=test_dataset, shuffle=True, batch_size=batch_size)
     # 定义模型相关内容
-    model = choose_model(model_name=model_name, dataset=dataset, **model_params).to(device)
+    model = choose_model(model_name=model_name, dataset=dataset, device=device, **model_params).to(device)
     opt = torch.optim.Adam(model.parameters(), lr=lr)
     loss_f = torch.nn.BCELoss()
+    valid_aucs = []
     for e in range(epoches):
         train(model, dataloader_train, opt, criterion=loss_f, device=device, log_interval=100)
         value_rmse, value_mae, value_auc = test(model, dataloader_valid, device)
+        valid_aucs.append(value_auc)
         print('value_rmse: {0}, value_mae: {1}, value_auc: {2}'.format(str(value_rmse), str(value_mae), str(value_auc)))
+    pyplot.plot(valid_aucs)
+    pyplot.title(model_name)
+    pyplot.show()

@@ -3,10 +3,10 @@ from layers import Feature_Embedding_Sum
 
 
 class LR(nn.Module):
-    def __init__(self, feature_dims):
+    def __init__(self, device, feature_dims):
         super(LR, self).__init__()
         self.predict = nn.Sequential(
-            Feature_Embedding_Sum(feature_dims, out_dim=1),
+            Feature_Embedding_Sum(feature_dims, out_dim=1, device=device),
             nn.Sigmoid()
         )
 

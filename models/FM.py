@@ -4,10 +4,10 @@ from layers import Feature_Embedding, Feature_Embedding_Sum, FactorizationMachin
 
 
 class FM(nn.Module):
-    def __init__(self, feature_dims, embed_size):
+    def __init__(self, device, feature_dims, embed_size):
         super(FM, self).__init__()
-        self.embedding = Feature_Embedding(feature_dims=feature_dims, embed_size=embed_size)
-        self.fc = Feature_Embedding_Sum(feature_dims=feature_dims, out_dim=1)
+        self.embedding = Feature_Embedding(feature_dims=feature_dims, embed_size=embed_size, device=device)
+        self.fc = Feature_Embedding_Sum(feature_dims=feature_dims, out_dim=1, device=device)
         self.fm = FactorizationMachine(reduce_sum=True)
 
     def forward(self, data):

@@ -4,10 +4,10 @@ from layers import Feature_Embedding, Feature_Embedding_Sum, FactorizationMachin
 
 
 class NFM(nn.Module):
-    def __init__(self, feature_dims, embed_size, hidden_nbs, dropout):
+    def __init__(self, device, feature_dims, embed_size, hidden_nbs, dropout):
         super(NFM, self).__init__()
-        self.embedding = Feature_Embedding(feature_dims=feature_dims, embed_size=embed_size)
-        self.fc = Feature_Embedding_Sum(feature_dims=feature_dims, out_dim=1)
+        self.embedding = Feature_Embedding(feature_dims=feature_dims, embed_size=embed_size, device=device)
+        self.fc = Feature_Embedding_Sum(feature_dims=feature_dims, out_dim=1, device=device)
         self.fm = FactorizationMachine(reduce_sum=False)
         self.mlp = MLP(input_dim=embed_size,
                        hidden_nbs=hidden_nbs,

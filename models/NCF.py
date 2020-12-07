@@ -4,11 +4,11 @@ from layers import Feature_Embedding, MLP
 
 
 class NCF(nn.Module):
-    def __init__(self, feature_dims, embed_size, hidden_nbs, user_field_idx, item_field_idx, dropout=0):
+    def __init__(self, device, feature_dims, embed_size, hidden_nbs, user_field_idx, item_field_idx, dropout=0):
         super(NCF, self).__init__()
         self.user_field_idx = user_field_idx
         self.item_field_idx = item_field_idx
-        self.embedding = Feature_Embedding(feature_dims=feature_dims, embed_size=embed_size)
+        self.embedding = Feature_Embedding(feature_dims=feature_dims, embed_size=embed_size, device=device)
         self.embed_out_dim = len(feature_dims) * embed_size
         self.mlp = MLP(input_dim=self.embed_out_dim,
                        hidden_nbs=hidden_nbs,

@@ -4,14 +4,14 @@ from layers import Feature_Embedding, MLP, Feature_Embedding_Sum
 
 
 class WideAndDeep(nn.Module):
-    def __init__(self, feature_dims, embed_size, hidden_nbs, dropout=0):
+    def __init__(self, device, feature_dims, embed_size, hidden_nbs, dropout=0):
         super(WideAndDeep, self).__init__()
-        self.embedding = Feature_Embedding(feature_dims=feature_dims, embed_size=embed_size)
+        self.embedding = Feature_Embedding(feature_dims=feature_dims, embed_size=embed_size, device=device)
         self.embed_out_dim = len(feature_dims) * embed_size
         self.mlp = MLP(input_dim=self.embed_out_dim,
                        hidden_nbs=hidden_nbs,
                        out_dim=hidden_nbs[-1], last_act=None, drop_rate=dropout)
-        self.linear = Feature_Embedding_Sum(feature_dims=feature_dims, out_dim=1)
+        self.linear = Feature_Embedding_Sum(feature_dims=feature_dims, out_dim=1, device=device)
 
     def forward(self, data):
         out_linear = self.linear(data)
