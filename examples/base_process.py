@@ -132,11 +132,19 @@ def main(model_name, dataset_name, dataset_path, epoches, batch_size,
     opt = torch.optim.Adam(model.parameters(), lr=lr)
     loss_f = torch.nn.BCELoss()
     valid_aucs = []
+    test_aucs = []
+    train_aucs = []
     for e in range(epoches):
         train(model, dataloader_train, opt, criterion=loss_f, device=device, log_interval=100)
         value_rmse, value_mae, value_auc = test(model, dataloader_valid, device)
         valid_aucs.append(value_auc)
+        value_rmse, value_mae, value_auc = test(model, dataloader_test, device)
+        test_aucs.append(value_auc)
+        value_rmse, value_mae, value_auc = test(model, dataloader_train, device)
+        train_aucs.append(value_auc)
         print('value_rmse: {0}, value_mae: {1}, value_auc: {2}'.format(str(value_rmse), str(value_mae), str(value_auc)))
-    pyplot.plot(valid_aucs)
+    pyplot.plot(train_aucs, color='red')
+    pyplot.plot(valid_aucs, color='blue')
+    pyplot.plot(test_aucs, color='green')
     pyplot.title(model_name)
     pyplot.show()
