@@ -4,6 +4,7 @@ import torch
 from models.DeepCross import DeepCross
 from models.FM import FM
 from models.LR import LR
+from models.MyMLP import MyMLP
 from models.NCF import NCF
 from models.NFM import NFM
 from models.WideAndDeep import WideAndDeep
@@ -92,6 +93,12 @@ def choose_model(model_name, dataset, device, **kwargs):
                             hidden_nbs=kwargs['hidden_nbs'],
                             num_layer=kwargs['num_layer'],
                             dropout=kwargs['dropout'])
+    elif model_name == 'my_mlp':
+        model = MyMLP(device=device,feature_dims=dataset.feature_dims,
+                      embed_size=kwargs['embed_size'],
+                      hidden_nbs=kwargs['hidden_nbs'],
+                      drop_rate=kwargs['dropout']
+                      )
     return model
 
 

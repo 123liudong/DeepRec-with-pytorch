@@ -79,6 +79,34 @@ class MLP(nn.Module):
         return self.mlp(data)
 
 
+class My_MLP(nn.Module):
+    def __init__(self, input_dim, hidden_nbs, out_dim, last_act='sigmoid', drop_rate=0.2):
+        '''
+        :param input_dim: 输入层的神经元个数
+        :param hidden_nbs: 列表，存储的是各个隐藏层神经元的个数
+        :param out_dim: 输出层的维度
+        :param last_act: 输出层的激活函数 'sigmoid', 'softmax'
+        :param drop_rate:
+        '''
+        super(My_MLP, self).__init__()
+        layers = []
+        for nb in hidden_nbs:
+            layers.append(nn.Linear(input_dim, nb))
+            layers.append(nn.BatchNorm1d(nb))
+            layers.append(Poly_2(nb))
+            layers.append(nn.Dropout(p=drop_rate))
+            input_dim = nb
+        layers.append(nn.Linear(input_dim, out_dim))
+        self.mlp = nn.Sequential(*layers)
+        if last_act == 'sigmoid':
+            self.mlp.add_module('sigmoid', nn.Sigmoid())
+        elif last_act == 'softmax':
+            self.mlp.add_module('softmax', nn.Softmax())
+
+    def forward(self, data):
+        return self.mlp(data)
+
+
 class FactorizationMachine(nn.Module):
     '''
     因子分解的部分
@@ -112,4 +140,21 @@ class CrossNet(nn.Module):
         for i in range(self.num_layer):
             xw = self.w[i](x)
             x = x0*xw + self.b[i] + x
+        return x
+
+
+class Poly_2(nn.Module):
+    '''
+    形如： a*x^2 + b*x + c
+    其中的a和b对每个神经元来说都是独一无二的
+    '''
+    def __init__(self, neuro_nb):
+        super(Poly_2, self).__init__()
+        self.a = nn.Parameter(torch.randn(neuro_nb, ))
+        self.b = nn.Parameter(torch.randn(neuro_nb, ))
+        self.c = nn.Parameter(torch.randn(neuro_nb, ))
+
+    def forward(self, data):
+        x = data * data
+        x = self.a * x + self.b*data + self.c
         return x

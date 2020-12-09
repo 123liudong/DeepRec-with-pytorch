@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from layers import Feature_Embedding, MLP
+from layers import Feature_Embedding, My_MLP
 
 
 class NCF(nn.Module):
@@ -10,9 +10,9 @@ class NCF(nn.Module):
         self.item_field_idx = item_field_idx
         self.embedding = Feature_Embedding(feature_dims=feature_dims, embed_size=embed_size, device=device)
         self.embed_out_dim = len(feature_dims) * embed_size
-        self.mlp = MLP(input_dim=self.embed_out_dim,
-                       hidden_nbs=hidden_nbs,
-                       out_dim=hidden_nbs[-1], last_act=None, drop_rate=dropout)
+        self.mlp = My_MLP(input_dim=self.embed_out_dim,
+                          hidden_nbs=hidden_nbs,
+                          out_dim=hidden_nbs[-1], last_act=None, drop_rate=dropout)
         self.fc = nn.Linear(hidden_nbs[-1]+embed_size, 1)
 
     def forward(self, data):

@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from layers import Feature_Embedding, MLP, CrossNet
+from layers import Feature_Embedding, My_MLP, CrossNet
 
 
 class DeepCross(nn.Module):
@@ -9,9 +9,9 @@ class DeepCross(nn.Module):
         self.embedding = Feature_Embedding(feature_dims=feature_dims, embed_size=embed_size, device=device)
         self.embed_out_dim = len(feature_dims) * embed_size
         self.cross = CrossNet(input_dim=self.embed_out_dim, num_layers=num_layer)
-        self.mlp = MLP(input_dim=self.embed_out_dim,
-                       hidden_nbs=hidden_nbs,
-                       out_dim=hidden_nbs[-1], last_act=None, drop_rate=dropout)
+        self.mlp = My_MLP(input_dim=self.embed_out_dim,
+                          hidden_nbs=hidden_nbs,
+                          out_dim=hidden_nbs[-1], last_act=None, drop_rate=dropout)
         self.fc = nn.Linear(hidden_nbs[-1]+self.embed_out_dim, 1)
 
     def forward(self, data):
